@@ -68,23 +68,28 @@
 
       
 
-        <section id="home" class="video-section js-height-full">
+        <section id="home" class=" js-height-full">
             <div class="overlay"></div>
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
-                    <p>Select your current location</p>
-                    <small>We can help you find your</small>
+                    <p style="    font-size: 1.2em;
+                    text-align: left;
+                    margin-top: 2em;
+                ">Navigate through Mapoly</p>
                     <div class="btn-wrapper">
                         <div class="text-center">
                            <form class="slideInLefts row" >
-                               <div class="form-group col-lg-11">
-                                   <input type="text" class="form-control" placeholder="Search...">
+                               <div class="form-group col-lg-12">
+                                   <input type="text" class="form-control currentLocation" placeholder="Your current Position within Mapoly ...">
                                </div>
-                               <div class="form-group col-lg-1">
-                                <a style = "padding: 10px;
-                                border: 1px solid #fff;
-                                color: #fff;" href="whereto.html">GO</a>
+                               <div class="form-group col-lg-12">
+                                <input style="    width: 84%;
+                                float: left;" type="text" class="form-control col-lg-6 destinationLocation" placeholder="Your Destination within Mapoly...">
+                                <p class="col-lg-3 goclick" style = "    color: #fff;
+                                cursor: pointer;" > <span> GO </span></p>
+                                <p class="error"></p>
                             </div>
+                              
                            </form>
                         </div>
                     </div><!-- end row -->
@@ -129,5 +134,29 @@
     <!-- VIDEO BG PLUGINS -->
     <script src="js/videobg.js"></script>
 
+
+    <script>
+
+            function doClick (){
+                document.querySelector(".goclick").addEventListener("click", event => {
+
+                        var currentLocation = document.querySelector(".currentLocation").value;
+                        var destinationLocation = document.querySelector(".destinationLocation").value;
+                     
+                        if(currentLocation !== "" && destinationLocation !== ""){
+                            window.location.replace("direction.html");
+                             localStorage.setItem("currentLocation",`${currentLocation}`);
+                             localStorage.setItem("destinationLocation",`${destinationLocation}`);
+                             document.querySelector(".error").textContent = "";
+                        }else{
+                            document.querySelector(".error").textContent = "Fields Can't be empty!";
+                        }
+
+                });
+            }
+
+            doClick ();
+
+    </script>
 </body>
 </html>

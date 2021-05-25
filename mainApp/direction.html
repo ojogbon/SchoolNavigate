@@ -39,10 +39,9 @@
     <style>
         .directions{
             border: 2px solid;
-    background-color: #fff;
+    background-color: rgb(0, 0, 0);
     border-radius: 5px;
     padding: 10px;
-    opacity: 0.6;
     margin-bottom: 10px;
         }
 
@@ -52,6 +51,10 @@
 
       .map-out{
           width: 20rem;
+      }
+      .destination, .initialPoint{
+        font-size: 20px;
+       text-transform: uppercase;
       }
     </style>
 </head>
@@ -71,8 +74,12 @@
             <div class="overlay"></div>
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
-                    <p> Your Destination</p>
-                    <small>We can help you find your</small>
+                    <p style=" font-size: 1.2em;
+                    text-align: left;
+                    margin-top: 2em;
+                    color: black;
+                ">Navigate through Mapoly</p>
+                <hr>    
                      <div class="container"> 
 
                         <div class="row directions"> 
@@ -80,10 +87,11 @@
                                 <img class="direcionImage" src="images/myMap.gif" alt="">
                             </div>
                             <div class="col-lg-4">
-                                turn
-                            </div>
+                                You are currently at <strong><span class="initialPoint"></span></strong>,
+                                Continue on this road for <b>10</b>meter <span class="goe-1">N`</span>  ward
+                             </div>
                             <div class="col-lg-4">
-                                right
+                                then turn right on the red bilding.
                             </div>
                             <img class="map-out map-1" src="images/locate/1.jpeg" alt="">
                         </div>
@@ -92,10 +100,10 @@
                                 <img class="direcionImage" src="images/myMap.gif" alt="">
                             </div>
                             <div class="col-lg-4">
-                                turn
+                                then turn left for another  5meter  <span class="goe-2">NE`</span>
                             </div>
                             <div class="col-lg-4">
-                                right
+                                then turn right to see this building
                             </div>
                             <img class="map-out map-2" src="images/locate/1.jpeg" alt="">
                         </div>
@@ -104,10 +112,10 @@
                                 <img class="direcionImage" src="images/myMap.gif" alt="">
                             </div>
                             <div class="col-lg-4">
-                                turn
+                                Continue on the route for 2min
                             </div>
                             <div class="col-lg-4">
-                                right
+                                then turn right on the small sheild 
                             </div>
                             <img class="map-out map-3" src="images/locate/1.jpeg" alt="">
                         </div>
@@ -116,10 +124,10 @@
                                 <img class="direcionImage" src="images/myMap.gif" alt="">
                             </div>
                             <div class="col-lg-4">
-                                turn
+                                work towards the tree 
                             </div>
                             <div class="col-lg-4">
-                                right
+                                you will see this building
                             </div>
                             <img class="map-out map-4" src="images/locate/1.jpeg" alt="">
                         </div>
@@ -128,10 +136,11 @@
                                 <img class="direcionImage" src="images/myMap.gif" alt="">
                             </div>
                             <div class="col-lg-4">
-                                turn
+                                Your destination 
                             </div>
                             <div class="col-lg-4">
-                                right
+                                you have Arrived at <strong><span class="destination"></span></strong>
+
                             </div>
                             <img class="map-out map-5" src="images/locate/1.jpeg" alt="">
                         </div>
@@ -188,19 +197,47 @@
     <script>
 
 
-        function naRand (){
-            return Math.floor(Math.random() * 14)+1;
+        function naRand (num){
+            return Math.floor(Math.random() * num)+1;
         }
 
         function giveRandomImage () {
 
-                document.querySelector(".map-1").src=`images/locate/${naRand()}.jpeg`;
-                document.querySelector(".map-2").src=`images/locate/${naRand()}.jpeg`;
-                document.querySelector(".map-3").src=`images/locate/${naRand()}.jpeg`;
-                document.querySelector(".map-4").src=`images/locate/${naRand()}.jpeg`;
-                document.querySelector(".map-5").src=`images/locate/${naRand()}.jpeg`;
+                document.querySelector(".map-1").src=`images/locate/${naRand(14)}.jpeg`;
+                document.querySelector(".map-2").src=`images/locate/${naRand(14)}.jpeg`;
+                document.querySelector(".map-3").src=`images/locate/${naRand(14)}.jpeg`;
+                document.querySelector(".map-4").src=`images/locate/${naRand(14)}.jpeg`;
+                document.querySelector(".map-5").src=`images/locate/${naRand(14)}.jpeg`;
         }
 
+        function currentLocation (){
+           var myLocation =  localStorage.getItem("currentLocation");
+            var myDestination =  localStorage.getItem("destinationLocation");
+
+            console.log(myLocation );
+            console.log(myDestination);
+
+            document.querySelector(".destination").textContent = myDestination;
+            document.querySelector(".initialPoint").textContent = myLocation;
+            
+        }
+
+        function changeGoe () {
+                var goeLocate = ['N`','E`','W`','S`','NE`','NW`','SE`','SW`','SS`']
+            document.querySelector(".goe-1").textContent = goeLocate[naRand (9)];
+            document.querySelector(".goe-2").textContent = goeLocate[naRand (9)];
+        }
+
+        function changeGoeColor () {
+                var goeLocate = ['red`','brown`','yellow`','red block`']
+            document.querySelector(".goe-1").textContent = goeLocate[naRand (3)];
+            document.querySelector(".goe-2").textContent = goeLocate[naRand (3)];
+        }
+
+
+        changeGoeColor ()
+        changeGoe ();
+        currentLocation ();
         giveRandomImage();
 
     </script>

@@ -1016,7 +1016,7 @@ SECTIONS
     left: 0;
     bottom: 0;
     z-index: 1;
-    background: url(images/pattern.png) repeat center center rgba(0, 0, 0, 0.7);
+    background: url(images/loadingMyMap.gif) repeat center center rgba(0, 0, 0, 0.7);
 }
 
 .video-section {
@@ -1058,7 +1058,6 @@ SECTIONS
 }
 
 .home-message {
-    display: table-cell;
     height: 100%;
     vertical-align: middle;
 }
