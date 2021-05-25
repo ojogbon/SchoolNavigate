@@ -93,7 +93,7 @@
                             <div class="col-lg-4">
                                 then turn right on the red bilding.
                             </div>
-                            <img class="map-out map-1" src="images/locate/1.jpeg" alt="">
+                            <img class="map-out map-1_" src="images/locate/1.jpeg" alt="">
                         </div>
                         <div class="row directions"> 
                             <div class="col-lg-4">
@@ -142,7 +142,7 @@
                                 you have Arrived at <strong><span class="destination"></span></strong>
 
                             </div>
-                            <img class="map-out map-5" src="images/locate/1.jpeg" alt="">
+                            <img class="map-out map-5_" src="images/locate/1.jpeg" alt="">
                         </div>
 
                      </div>
@@ -203,19 +203,32 @@
 
         function giveRandomImage () {
 
-                document.querySelector(".map-1").src=`images/locate/${naRand(14)}.jpeg`;
                 document.querySelector(".map-2").src=`images/locate/${naRand(14)}.jpeg`;
                 document.querySelector(".map-3").src=`images/locate/${naRand(14)}.jpeg`;
                 document.querySelector(".map-4").src=`images/locate/${naRand(14)}.jpeg`;
-                document.querySelector(".map-5").src=`images/locate/${naRand(14)}.jpeg`;
+
         }
 
         function currentLocation (){
            var myLocation =  localStorage.getItem("currentLocation");
             var myDestination =  localStorage.getItem("destinationLocation");
 
+            var picturesSet = {"bus sheild" : "21.jpeg",
+                                "ptdf" : "2.jpeg",
+                                "etf science" : "4.jpeg",
+                                 "school office" :"6.jpeg",
+                                 "kesington adebutu": "8.jpeg",
+                                 "800 seater" : "9.jpeg",
+                                 "tetfund intervention" : "10.jpeg",
+                                 "micro finance bank":"12.jpeg",
+                                 "library":"15.jpeg",
+                                 "ict" : "18.jpeg"};
             console.log(myLocation );
             console.log(myDestination);
+
+
+            document.querySelector(".map-1_").src=`images/locate/${picturesSet[myLocation.toLowerCase()]}`;
+            document.querySelector(".map-5_").src=`images/locate/${picturesSet[myDestination.toLowerCase()]}`;
 
             document.querySelector(".destination").textContent = myDestination;
             document.querySelector(".initialPoint").textContent = myLocation;
