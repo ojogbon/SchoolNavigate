@@ -38,19 +38,31 @@
 
     <style>
         .directions{
-            border: 2px solid;
-    background-color: rgb(0, 0, 0);
+            /* border: 2px solid; */
+    /* background-color: rgb(255 255 255);  */
     border-radius: 5px;
     padding: 10px;
     margin-bottom: 10px;
+    color: #000;
         }
 
       .direcionImage{
-          width: 60px;
-      }  
+          width: 50px;
+          border: 1px solid;
+    margin-left: 0px;
+    margin-top: 0px;
+    height: 50px;
+    border-radius: 50%;
+    position: fixed;
+      } 
+      
+      .sec {
+
+      }
 
       .map-out{
-          width: 20rem;
+        width: 10rem;
+    height: 10rem;
       }
       .destination, .initialPoint{
         font-size: 20px;
@@ -70,8 +82,13 @@
 
       
 
-        <section id="home" class=" js-height-full">
-            <div class="overlay"></div>
+        <section id="home" style="
+         background-color: rgb(255, 255, 255);
+        background-repeat: no-repeat;
+        background-image: url(images/locate/likeit.png);
+        background-size: cover;
+        background-position: center;    height: auto;">
+
             <div class="home-text-wrapper relative container">
                 <div class="home-message">
                     <p style=" font-size: 1.2em;
@@ -96,9 +113,7 @@
                             <img class="map-out map-1_" src="images/locate/1.jpeg" alt="">
                         </div>
                         <div class="row directions"> 
-                            <div class="col-lg-4">
-                                <img class="direcionImage" src="images/myMap.gif" alt="">
-                            </div>
+
                             <div class="col-lg-4">
                                 then turn left for another  5meter  <span class="goe-2">NE`</span>
                             </div>
@@ -108,9 +123,7 @@
                             <img class="map-out map-2" src="images/locate/1.jpeg" alt="">
                         </div>
                         <div class="row directions"> 
-                            <div class="col-lg-4">
-                                <img class="direcionImage" src="images/myMap.gif" alt="">
-                            </div>
+                           
                             <div class="col-lg-4">
                                 Continue on the route for 2min
                             </div>
@@ -120,9 +133,7 @@
                             <img class="map-out map-3" src="images/locate/1.jpeg" alt="">
                         </div>
                         <div class="row directions"> 
-                            <div class="col-lg-4">
-                                <img class="direcionImage" src="images/myMap.gif" alt="">
-                            </div>
+                            
                             <div class="col-lg-4">
                                 work towards the tree 
                             </div>
@@ -132,9 +143,7 @@
                             <img class="map-out map-4" src="images/locate/1.jpeg" alt="">
                         </div>
                         <div class="row directions"> 
-                            <div class="col-lg-4">
-                                <img class="direcionImage" src="images/myMap.gif" alt="">
-                            </div>
+                           
                             <div class="col-lg-4">
                                 Your destination 
                             </div>
@@ -191,7 +200,7 @@
     <script src="js/animate.js"></script>
     <script src="js/custom.js"></script>
     <!-- VIDEO BG PLUGINS -->
-    <script src="js/videobg.js"></script>
+    <!-- <script src="js/videobg.js"></script> -->
 
 
     <script>

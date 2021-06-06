@@ -87,7 +87,7 @@ SKELETON
 ******************************************/
 
 body {
-    background-color: #f6f6f6;
+    background-color: #fff;
     line-height: 1.6;
     font-size: 16px;
     color: #a2a2a2;
@@ -165,7 +165,7 @@ blockquote {
     font-family: 'Droid Serif', sans-serif;
     font-style: italic;
     border: 1px solid #eaeaea;
-    background-color: #f6f6f6;
+    background-color: #fff;
 }
 
 blockquote:after {
@@ -174,7 +174,7 @@ blockquote:after {
     font-family: FontAwesome;
     position: absolute;
     bottom: 0px;
-    color: #f6f6f6;
+    color: #fff;
     font-size: 24px;
     right: 10px;
 }
@@ -185,7 +185,7 @@ blockquote:before {
     font-family: FontAwesome;
     position: absolute;
     top: 0;
-    color: #f6f6f6;
+    color: #fff;
     font-size: 24px;
     left: 10px;
 }
@@ -1002,11 +1002,11 @@ SECTIONS
 }
 
 .section.gb {
-    background-color: #f6f6f6;
+    background-color: #fff;
 }
 
 .section.db {
-    background-color: #000000;
+    background-color: #fff;
 }
 
 .overlay {
@@ -1016,7 +1016,7 @@ SECTIONS
     left: 0;
     bottom: 0;
     z-index: 1;
-    background: url(images/loadingMyMap.gif) repeat center center rgba(0, 0, 0, 0.7);
+    background:  repeat center center rgba(255, 255, 255, 0.7);
 }
 
 .video-section {
@@ -1276,7 +1276,7 @@ WIDGETS
 
 .sidebar .widget-title {
     font-weight: 600;
-    color: #000000;
+    color: #fff;
 }
 
 .sidebar .tags-widget li {
@@ -1473,7 +1473,7 @@ BLOG
 }
 
 .blog-desc-big .lead {
-    color: #000000;
+    color: #fff;
     font-weight: 600;
 }
 
@@ -1549,7 +1549,7 @@ BLOG
     font-weight: 700;
     padding: 0 0 15px;
     margin: 0;
-    color: #000000;
+    color: #fff;
 }
 
 .blog-desc p {
@@ -1635,7 +1635,7 @@ TESTIMONIAL
     font-family: FontAwesome;
     position: absolute;
     bottom: 0px;
-    color: #f6f6f6;
+    color: #fff;
     font-size: 21px;
     right: 10px;
 }
@@ -1646,7 +1646,7 @@ TESTIMONIAL
     font-family: FontAwesome;
     position: absolute;
     top: 0;
-    color: #f6f6f6;
+    color: #fff;
     font-size: 21px;
     left: 10px;
 }
@@ -1795,8 +1795,8 @@ SHOP
     position: relative;
     margin: 30px 0;
     padding: 30px 0;
-    border-top: 3px solid #f6f6f6;
-    border-bottom: 3px solid #f6f6f6;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
 }
 
 .shop-meta ul {
@@ -1812,7 +1812,7 @@ SHOP
 .shop-extra {
     margin-top: 40px;
     padding: 60px 60px 40px;
-    border: 3px solid #f6f6f6;
+    border: 3px solid #fff;
 }
 
 .shop-extra .nav-tabs>li>a {
@@ -1830,7 +1830,7 @@ SHOP
 }
 
 .shop-extra .nav-tabs {
-    border-bottom: 3px solid #f6f6f6 !important;
+    border-bottom: 3px solid #fff !important;
 }
 
 .shop-extra .nav-tabs>li:hover a,
@@ -1843,7 +1843,7 @@ SHOP
 }
 
 .shop-extra strong {
-    color: #000000;
+    color: #fff;
 }
 
 .shop-extra .tab-content h3 {
@@ -1897,8 +1897,8 @@ FOOTER
 }
 
 .copyrights {
-    background-color: #000;
-    border-top: 1px solid #181818;
+    background-color: #fff;
+    border-top: 1px solid #fff;
     padding: 30px 0;
 }
 
